@@ -37,7 +37,6 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 Core/Src/main.c \
-MDR32F9_1986VE4_2015/Libraries/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/system_MDR32F9Qx.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_adc.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_arinc429r.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_arinc429t.c \
@@ -62,7 +61,8 @@ MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_ssp.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_timer.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_uart.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_usb.c \
-MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_wwdg.c 
+MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_wwdg.c \
+MDR32F9_1986VE4_2015/Libraries/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc/system_MDR32F9Qx.c 
 
 
 # ASM sources
@@ -118,7 +118,6 @@ CPU = -mcpu=cortex-m3
 # mcu
 MCU = $(CPU) -mthumb
 
-#CFLAGS = $(MCU) $(OPT) -ffunction-sections -fdata-sections -Wall -Wextra -Wshadow -Wredundant-decls -Wno-missing-field-initializers -Wconversion -Wno-packed-bitfield-compat -pipe
 
 # C defines
 C_DEFS =  \
@@ -136,18 +135,13 @@ C_INCLUDES =  \
 -IMDR32F9_1986VE4_2015/Config \
 -IMDR32F9_1986VE4_2015/Libraries/CMSIS/CM3/DeviceSupport/MDR32F9Qx/startup/gcc 
 
-# compile gcc flags
-#ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -ffunction-sections -fdata-sections -Wall -Wextra -Wshadow -Wredundant-decls -Wno-missing-field-initializers -Wconversion -Wno-packed-bitfield-compat -pipe 
-#-Wall -fdata-sections -ffunction-sections
 
-#CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -ffunction-sections -fdata-sections -Wall -Wextra -Wshadow -Wredundant-decls -Wno-missing-field-initializers -Wconversion -Wno-packed-bitfield-compat -pipe
-#-Wall -fdata-sections -ffunction-sections
-#CFLAGS += -DUSE_MDR1986VE9x -D__STARTUP_CLEAR_BSS -D__START=main ${C_INCLUDES} -c ${C_SOURCES} -o ${C_SOURCES}.o
+EXTRA_DATA = -Wextra -Wshadow -Wredundant-decls -Wno-missing-field-initializers -Wconversion -Wno-packed-bitfield-compat -pipe
 
 # compile gcc flags
-ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections $(EXTRA_DATA)
 
-CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections $(EXTRA_DATA)
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2
