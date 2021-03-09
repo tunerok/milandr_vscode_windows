@@ -18,7 +18,7 @@ Tesed в 1986BE92
 * [Cortex-Debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug) расширение
 * Для корректной работы IntelliSense и определения .h файлов из [makefile](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools)
   
-SPL-файлы и .SVD-файлы можно найти [здесь](https://ic.milandr.ru/soft/) или [здесь](https://github.com/eldarkg/emdr1986x-std-per-lib )
+Самые последние SPL-файлы и .SVD-файлы можно найти [здесь](https://ic.milandr.ru/soft/) или [здесь](https://github.com/eldarkg/emdr1986x-std-per-lib). Они также приложены к данному репозиторию в директории MDR32F9_1986VE4_2015\IDE\keil\SVD. 
 
 ***
 
@@ -26,7 +26,7 @@ SPL-файлы и .SVD-файлы можно найти [здесь](https://ic.
 
 **Добавить информацию о MCU в j-link**
 
-Для правильного определения типа контроллера вы можете добавить файлы .FLM в папку j-link [HOWTO](https://startmilandr.ru/doku.php/prog:start:j-flash) или [посмотрите здесь, если ссылка недоступна](https://github.com/tunerok/milandr_vscode_windows/info_backup/prog_start_j-flash.pdf)
+Для правильного определения типа контроллера вы можете добавить файлы .FLM (они также приложены в MDR32F9_1986VE4_2015\Flash) в папку j-link [HOWTO](https://startmilandr.ru/doku.php/prog:start:j-flash) или [посмотрите здесь, если ссылка недоступна](https://github.com/tunerok/milandr_vscode_windows/info_backup/prog_start_j-flash.pdf)
 
 
 **Для JLink GDB**
