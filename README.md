@@ -1,4 +1,4 @@
-Tesed в 1986BE92
+Протестировано с отладочным комплектом для 1986BE92У
 
 
 Проект подготовлен для работы с отладочно платой Milandr 1986BE92 через VSCode (версия для Windows).
@@ -26,7 +26,7 @@ Tesed в 1986BE92
 
 **Добавить информацию о MCU в j-link**
 
-Для правильного определения типа контроллера вы можете добавить файлы .FLM (они также приложены в MDR32F9_1986VE4_2015\Flash) в папку j-link [HOWTO](https://startmilandr.ru/doku.php/prog:start:j-flash) или [посмотрите здесь, если ссылка недоступна](https://github.com/tunerok/milandr_vscode_windows/info_backup/prog_start_j-flash.pdf)
+Для правильного определения типа контроллера вы можете добавить файлы .FLM (они также приложены в MDR32F9_1986VE4_2015\Flash) в папку j-link [HOWTO](https://startmilandr.ru/doku.php/prog:start:j-flash) или посмотрите здесь (\info_backup), если ссылка недоступна.
 
 
 **Для JLink GDB**
