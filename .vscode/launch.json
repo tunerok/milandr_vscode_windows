@@ -10,7 +10,7 @@
 			"request": "launch",
 			"type": "cortex-debug",
 			"servertype": "jlink",
-			"device": "Cortex-M3",
+			"device": "1986BE9X",
 			"interface": "swd",
 			"ipAddress": null,
             "serialNumber": null,
