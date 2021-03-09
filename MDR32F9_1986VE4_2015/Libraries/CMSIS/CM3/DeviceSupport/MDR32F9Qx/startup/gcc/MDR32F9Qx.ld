@@ -5,6 +5,12 @@ MEMORY
 	RAM (rwx)  : ORIGIN = 0x20000000, LENGTH = 32K
 }
 
+/*MEMORY_old
+{
+	FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 128K
+	RAM (rwx)  : ORIGIN = 0x20000000, LENGTH = 32K
+}
+*/
 /* Linker script to place sections and symbol values. Should be used together
  * with other linker script that defines memory regions FLASH and RAM.
  * It references following symbols, which must be defined in code:

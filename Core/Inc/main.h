@@ -6,7 +6,8 @@ extern "C" {
 #endif
 
 #include "MDR32Fx.h"
-#include "MDR32F9Qx_port.h"
+#include "gpio.h"
+
 #ifdef __cplusplus
 }
 #endif

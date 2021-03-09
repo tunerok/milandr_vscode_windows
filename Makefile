@@ -37,6 +37,7 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 Core/Src/main.c \
+Core/Src/gpio.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_adc.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_arinc429r.c \
 MDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/src/MDR32F9Qx_arinc429t.c \
@@ -128,6 +129,7 @@ C_DEFS =  \
 # C includes
 C_INCLUDES =  \
 -ICore/Inc \
+-IMDR32F9_1986VE4_2015/Config \
 -IMDR32F9_1986VE4_2015/Libraries/CMSIS/CM3/DeviceSupport/MDR32F9Qx/inc \
 -IMDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/inc \
 -IMDR32F9_1986VE4_2015/Libraries/MDR32F9Qx_StdPeriph_Driver/inc/USB_Library \
